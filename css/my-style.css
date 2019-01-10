@@ -1,0 +1,79 @@
+/* Přizpůsobení css osobním potřebám (nad rámec W3.CSS frameworku). */
+html,body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+em {
+  font-style: inherit;
+}
+
+.my-blue {
+  color: #0096FF;
+}
+/* Posune obsah stránky (včetně patičky) o 250px doprava, pokud je viditelné postranní menu. */
+.shift-right {
+  margin-left: 250px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.short {
+  width: 50%;
+}
+
+.resize-medium {
+  width: 350px;
+  height: auto;
+}
+
+.resize-small {
+  width: 20px;
+  height: auto;
+}
+
+.my-theme {
+  color:#fff !important;
+  background-color:#444444 !important;
+}
+
+.format {
+  white-space: pre-wrap;
+}
+
+.my-margin-top {
+  margin-top: 24px;
+}
+
+#my-overlay {
+  cursor: pointer;
+}
+/* Následující css zajišťuje, aby patička byla vždy vespod stránky - nezávisle na množství obsahu
+(k tomu je potřeba nastylovat i elementy okolo). */
+.my-container {
+  min-height: 100%;
+  position: relative;
+}
+
+.my-main {
+  padding-bottom: 182px;
+}
+
+#my-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 182px;
+}
