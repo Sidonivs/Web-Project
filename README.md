@@ -1,3 +1,3 @@
 # Web-Project
 
-Diskuzní fórum pro předmět Základy webových aplikací na FEL ČVUT.
+Toto diskuzní fórum je webový semestrální projekt pro předmět Základy webových aplikací na FEL ČVUT.

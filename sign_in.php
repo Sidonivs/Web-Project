@@ -3,6 +3,7 @@
   require_once 'form_management/user_check.php';
 ?>
 
+<!-- Stránka s formulářem pro přihlášení. -->
 <!DOCTYPE html>
 <html lang="cs">
 

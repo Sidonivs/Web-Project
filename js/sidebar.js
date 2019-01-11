@@ -1,10 +1,10 @@
-// Get the Sidebar
+// Získáme postranní menu
 var mySidebar = document.getElementById("my-sidebar");
 
-// Get the div with overlay effect
+// Získáme div, který bude fungovat jako efekt překrytí.
 var overlayBg = document.getElementById("my-overlay");
 
-// Toggle between showing and hiding the sidebar, and add overlay effect
+// Přepínání mezi ukázáním a schováním postranního menu. Přidává efekt překrytí (overlay).
 function w3_open() {
     if (mySidebar.style.display === 'block') {
         mySidebar.style.display = 'none';
@@ -15,7 +15,7 @@ function w3_open() {
     }
 }
 
-// Close the sidebar with the close button
+// Zavře postranní menu.
 function w3_close() {
     mySidebar.style.display = "none";
     overlayBg.style.display = "none";

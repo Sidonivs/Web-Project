@@ -1,7 +1,7 @@
 <?php
 
   session_start();
-  if (!isset($_SESSION['user'])) {
+  if (!isset($_SESSION['user'])) {      // Tato stránka je přístupná pouze přihlášenému uživateli.
     header('Location: index.php');
     exit;
   }
@@ -13,6 +13,7 @@
 
 ?>
 
+<!-- Stránka s formulářem pro přidání nového příspěvku. -->
 <!DOCTYPE html>
 <html lang="cs">
 

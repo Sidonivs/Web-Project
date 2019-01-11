@@ -3,6 +3,7 @@
   require_once 'form_management/user_create.php';
 ?>
 
+<!-- Stránka s formulářem pro registraci. -->
 <!DOCTYPE html>
 <html lang="cs">
 

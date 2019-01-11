@@ -1,7 +1,7 @@
 <?php
 
   session_start();
-  if (!isset($_SESSION['user']) or ($_SESSION['user'] != 'admin')) {
+  if (!isset($_SESSION['user']) or ($_SESSION['user'] != 'admin')) {   // Tato stránka je přístupná pouze administrátorovi.
     header('Location: index.php');
     exit;
   }
@@ -13,6 +13,7 @@
 
 ?>
 
+<!-- Stránka se dvěma formuláři pro úpravu témat. -->
 <!DOCTYPE html>
 <html lang="cs">
 

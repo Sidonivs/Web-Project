@@ -1,3 +1,6 @@
+// Tento soubor obsahuje validaci v Javascriptu "on submit", která probíhá na straně klienta.
+// Každý formulář je zde zastoupen 1 funkcí.
+
 // Registrace
 
 var signup_form = document.querySelector("#signup-form");

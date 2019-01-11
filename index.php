@@ -64,6 +64,7 @@
     }
   ?>
 
+  <!-- Hlavní obsah stránky (main) a patička. Oboje je potřeba posunout doprava kvůli postrannímu menu. -->
   <div class="w3-main my-container shift-right">
     <main class="my-main">
       <div class="w3-padding-32">

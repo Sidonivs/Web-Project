@@ -1,3 +1,7 @@
+// Tento script zajišťuje kontrolu formuláře registrace pomocí AJAXu.
+
+// Kontrola uživatelského jména (zda již neexistuje v databázi).
+
 var username = document.querySelector("#name");
 
 function print_username_err(event) {
@@ -22,6 +26,9 @@ function check_username_ajax(event) {
 
 username.addEventListener("blur", check_username_ajax);
 
+
+
+// Kontrola emailu
 
 var email = document.querySelector("#email");
 

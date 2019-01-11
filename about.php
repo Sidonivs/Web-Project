@@ -1,5 +1,6 @@
 <?php session_start(); ?>
 
+<!-- Stránka s popisem fóra. -->
 <!DOCTYPE html>
 <html lang="cs">
 
@@ -22,7 +23,7 @@
     <main class="my-main">
 
       <div class="w3-row w3-padding-64">
-        <article class="w3-twothird w3-container">
+        <article class="w3-twothird w3-container">  <!-- Dvě třetiny obsahu zabírá text. -->
           <h2>O stránce</h2>
           <p>Vítejte na stránkách diskuzního fóra Ferrum. Název je latinský a do češtiny se překládá jako železo.
             To má v periodické tabulce prvků zkratku Fe.</p>
@@ -34,7 +35,7 @@
             zdenekotrly@gmail.com</p>
         </article>
 
-        <div class="w3-third w3-container">
+        <div class="w3-third w3-container">  <!-- Jednu třetinu obsahu zabírá obrázek (logo). -->
           <img class="resize-medium" src="images/ferrum_logo.png" alt="Logo Ferrum">
         </div>
       </div>
