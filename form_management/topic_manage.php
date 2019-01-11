@@ -4,7 +4,7 @@
   // Obsluha formulářů pro úpravu kategorií/témat.
 
   $errors = array();
-  if (isset($_POST['new-topic'])) {    // Formulář pro přidání kategorie.
+  if (isset($_POST['new-topic'])) {         // Formulář pro přidání kategorie.
 
     require_once 'form_management/validation_server.php';
     require_once 'db_control/categories.php';
@@ -12,7 +12,7 @@
     $new_cat_name = trim($_POST['new-topic']);
 
     if (!validate_cat_name($new_cat_name)) {
-      $errors['new-topic'] = 'Název tématu musí obsahovat 1 - 30 znaků';
+      $errors['new-topic'] = 'Název tématu musí obsahovat 1 - 20 znaků';
     }
 
     if (count($errors) == 0) {

@@ -23,7 +23,7 @@
       <div class="w3-row w3-padding-64">
         <div class="w3-twothird w3-container">
           <h2>Přihlášení</h2>
-          <form class="w3-container w3-large" method="post" action="sign_in.php">
+          <form id="signin-form" class="w3-container w3-large" method="post" action="sign_in.php">
             <div class="w3-section">
               <label for="name">Uživatelské jméno</label>
               <input class="w3-input short w3-animate-input<?php echo add_err_class('username', $errors); ?>"
@@ -36,7 +36,7 @@
               <label for="pw">Heslo</label>
               <input class="w3-input short w3-animate-input<?php echo add_err_class('password', $errors); ?>"
                 id="pw" type="password" name="password" placeholder="********" required>
-              <?php echo error_message('password', $errors); ?>
+              <span id="pw-err"><?php echo error_message('password', $errors); ?></span>
             </div>
 
             <input class="w3-btn w3-white w3-border w3-xlarge" type="submit" name="signin" value="Přihlásit">

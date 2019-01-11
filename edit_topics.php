@@ -33,14 +33,14 @@
       <div class="w3-row w3-padding-64">
         <div class="w3-twothird w3-container">
           <h2>Přidat téma</h2>
-          <form class="w3-container w3-large" method="post" action="edit_topics.php">
+          <form id="add-topic-form" class="w3-container w3-large" method="post" action="edit_topics.php">
 
             <div class="w3-section">
               <label for="topic-name">Název</label>
               <input id="topic-name" class="w3-input w3-border short w3-animate-input<?php echo add_err_class('new-topic', $errors); ?>"
                 type="text" name="new-topic" required
                 value="<?php echo check_request_param('new-topic'); ?>">
-              <?php echo error_message('new-topic', $errors); ?>
+              <span id="span-new-topic"><?php echo error_message('new-topic', $errors); ?></span>
             </div>
 
             <input class="w3-btn w3-white w3-border" type="submit" value="Přidat">
@@ -53,7 +53,7 @@
 
         <div class="w3-twothird w3-container">
           <h2>Odebrat téma</h2>
-          <form class="w3-container w3-large" method="post" action="edit_topics.php">
+          <form id="del-topic-form" class="w3-container w3-large" method="post" action="edit_topics.php">
 
             <select class="w3-select w3-section w3-margin-top w3-border short<?php echo add_err_class('topic', $errors); ?>"
               id="topic" name="del-topic-id" required>
@@ -66,7 +66,7 @@
                 }
               ?>
             </select>
-            <?php echo error_message('topic', $errors); ?>
+            <span id="span-del-topic"><?php echo error_message('topic', $errors); ?></span>
             <br>
             <input class="w3-btn w3-white w3-border" type="submit" value="Odebrat">
             <p>Pozor: Po odebrání tématu budou všechny příspěvky které se v něm nacházejí přesunuty do archivu.</p>
