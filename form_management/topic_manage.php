@@ -18,6 +18,7 @@
     if (count($errors) == 0) {
       if (add_category($new_cat_name)) {
         header('Location: index.php');
+        exit;
       } else {
         $errors['new-topic'] = 'Takové téma již existuje';
       }
@@ -34,8 +35,10 @@
     if (count($errors) == 0) {
       if (del_category((int)$_POST['del-topic-id'])) {
         header('Location: index.php');
+        exit;
       } else {
         header('Location: my_error.php?a='.$_POST['del-topic-id']);
+        exit;
       }
     }
   }

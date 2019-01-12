@@ -40,8 +40,10 @@
         if (add_user($username, $email, $pw_hash)) {
           $_SESSION['user'] = htmlspecialchars($username);
           header('Location: index.php');
+          exit;
         } else {
           header('Location: my_error.php');
+          exit;
         }
       }
     }

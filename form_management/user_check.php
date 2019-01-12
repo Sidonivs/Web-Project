@@ -27,6 +27,7 @@
           $_SESSION['user'] = htmlspecialchars($_POST['username']);
 
           header('Location: index.php');
+          exit;
         } else {
           $errors['wrong_input'] = 'Špatné uživatelské jméno nebo heslo'; // Z bezpečnostních důvodů neoznamuji uživateli, který údaj zadal špatně.
         }
