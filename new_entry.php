@@ -59,7 +59,7 @@
             <div class="w3-section">
               <label for="entry">Text příspěvku</label>
               <textarea id="entry" class="w3-input w3-border<?php echo add_err_class('body', $errors); ?>"
-                name="entry" rows="10" maxlength="65000" required><?php echo check_request_param('entry'); ?></textarea>
+                name="entry" rows="9" maxlength="65000" required><?php echo check_request_param('entry'); ?></textarea>
               <span id="span-body"><?php echo error_message('body', $errors); ?></span>
             </div>
 
