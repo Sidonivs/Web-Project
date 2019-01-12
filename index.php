@@ -24,11 +24,29 @@
   $archive = get_archive();
   array_push($categories, $archive);
 
+  if (isset($_COOKIE['topic'])) {
+    $current_cat_id = $_COOKIE['topic'];
+  } else {
+    $current_cat_id = 'none';
+  }
+  // Zjišťování maximálního počtu stránek.
+  $num_of_posts = get_num_of_posts_by_cat($current_cat_id);
+  $max_page_num = (int)(($num_of_posts - 1) / 3 + 1);
+  if ($max_page_num > 10) {
+    $max_page_num = 10;
+  }
+
   if (isset($_GET['page'])) {
-    $page_num = (int)$_GET['page'];  // Nastaví číslo stránky na hodnotu $_GET['page'], pokud není k dispozici, nastaví defaultně na 1.
+    if ($_GET['page'] <= $max_page_num) {
+      $page_num = (int)$_GET['page'];  // Pokud $_GET['page'] splňuje podmínky (isset, velikost),
+                                       // nastaví se podle ní číslo aktuální stránky.
+    } else {
+      $page_num = $max_page_num;
+    }
   } else {
     $page_num = 1;
   }
+  // Offset je o číslo, které říká o kolik řádek se posune dotaz na tahání příspěvků z databáze.
   $offset = 3*($page_num - 1);
 
   if (isset($_COOKIE['topic'])) {

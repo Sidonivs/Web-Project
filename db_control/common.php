@@ -4,6 +4,7 @@
   // Funkce connect_db() vytvoří spojení s databází a využívají ji všechny PHP funkce, které s databází přímo komunikují.
   /*
   function connect_db() {
+    // Pro komunikaci PHP s databází MySQL je v tomto projektu použita knihovna PDO (dokumentace/manuál: http://php.net/manual/en/book.pdo.php)
     $conStr = "mysql:host=wa.toad.cz;dbname=kotrlzde";
     $link = new PDO($conStr, 'kotrlzde', 'webove aplikace', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
 

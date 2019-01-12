@@ -9,7 +9,7 @@
 které je na menších obrazovkách možné otevírat a zavírat => je tak věnováno co nejvíce prostoru samotnému obsahu fóra. -->
 
 <!-- Vrchní lišta -->
-<header class="w3-top">
+<header id="my-top-menu" class="w3-top">
   <div class="w3-bar w3-top w3-left-align w3-xlarge <?php if (isset($_COOKIE['theme'])) {
     if ($_COOKIE['theme'] == 'dark') {
       echo 'w3-theme-l4';

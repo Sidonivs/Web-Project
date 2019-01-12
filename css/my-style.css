@@ -77,3 +77,34 @@ em {
   width: 100%;
   height: 182px;
 }
+
+@media print {
+  html,body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  #pagination, #my-top-menu, #my-sidebar, #my-footer {
+    display: none;
+  }
+
+  .my-main {
+    padding-bottom: 0px;
+  }
+
+  h1 {
+    font-size:36px;
+  }
+
+  h2 {
+    font-size:24px;
+  }
+
+  h3 {
+    font-size:18px;
+  }
+}
