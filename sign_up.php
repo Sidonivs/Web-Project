@@ -28,7 +28,7 @@
             <div class="w3-section">
               <label for="name">Uživatelské jméno</label>
               <input class="w3-input short w3-animate-input<?php echo add_err_class('username', $errors); ?>"
-                id="name" type="text" name="username" placeholder="Jméno nebo přezdívka" required
+                id="name" type="text" name="username" placeholder="Jméno nebo přezdívka" maxlength="20" required pattern=".{1,20}"
                 value="<?php echo check_request_param('username'); ?>">
               <span id="name-err"><?php echo error_message('username', $errors); ?></span>
             </div>
@@ -36,7 +36,7 @@
             <div class="w3-section">
               <label for="email">E-Mail</label>
               <input class="w3-input short w3-animate-input<?php echo add_err_class('email', $errors); ?>"
-                id="email" type="email" name="email" placeholder="example@domain.com" required
+                id="email" type="email" name="email" placeholder="example@domain.com" maxlength="100" required pattern=".{1,100}"
                 value="<?php echo check_request_param('email'); ?>">
               <span id="email-err"><?php echo error_message('email', $errors); ?></span>
             </div>
@@ -44,7 +44,7 @@
             <div class="w3-section">
               <label for="pw">Heslo</label>
               <input class="w3-input short w3-animate-input<?php echo add_err_class('password', $errors); ?>"
-                id="pw" type="password" name="password" placeholder="********" required>
+                id="pw" type="password" name="password" placeholder="********" maxlength="20" required pattern=".{1,20}">
               <span id="pw-err"><?php echo error_message('password', $errors); ?></span>
             </div>
 

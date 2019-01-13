@@ -20,7 +20,7 @@
   }
 
   function validate_password($password) {
-    if (strlen($password) > 0) {
+    if ((strlen($password) > 0) and (strlen($password) <= 20)) {
       return true;
     } else {
       return false;

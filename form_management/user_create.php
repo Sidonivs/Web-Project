@@ -21,7 +21,7 @@
     }
 
     if (!validate_password($_POST['password'])) {
-      $errors['password'] = 'Heslo musí být vyplněné';
+      $errors['password'] = 'Heslo musí obsahovat 1 - 20 znaků';
     }
 
     if (count($errors) == 0) {

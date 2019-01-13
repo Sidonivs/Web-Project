@@ -33,19 +33,20 @@ function check_signup_form(event) {
         event.preventDefault();
         email.classList.add("w3-border-red");
         span_email.innerHTML = "Email musí být vyplněný a obsahovat zavináč (povoleno maximálně 100 znaků)";
+    }
 
     // Heslo
 
     var password = document.querySelector("#pw");
     var span_password = document.querySelector("#pw-err");
 
-    if (password.value.length > 0) {
+    if ((password.value.length > 0) && (password.value.length <= 20)) {
   	    password.classList.remove("w3-border-red");
         span_password.innerHTML = "";
     } else {
         event.preventDefault();
         password.classList.add("w3-border-red");
-        span_password.innerHTML = "Heslo musí být vyplněné";
+        span_password.innerHTML = "Heslo musí obsahovat 1 - 20 znaků";
     }
 }
 
@@ -80,13 +81,13 @@ function check_signin_form(event) {
     var password = document.querySelector("#pw");
     var span_password = document.querySelector("#pw-err");
 
-    if (password.value.length > 0) {
+    if ((password.value.length > 0) && (password.value.length <= 20)) {
   	    password.classList.remove("w3-border-red");
         span_password.innerHTML = "";
     } else {
         event.preventDefault();
         password.classList.add("w3-border-red");
-        span_password.innerHTML = "Heslo musí být vyplněné";
+        span_password.innerHTML = "Heslo musí obsahovat 1 - 20 znaků";
     }
 }
 

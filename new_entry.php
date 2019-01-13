@@ -51,7 +51,7 @@
             <div class="w3-section">
               <label for="title">Nadpis</label>
               <input id="title" class="w3-input w3-border short w3-animate-input<?php echo add_err_class('title', $errors); ?>"
-                type="text" name="title" required
+                type="text" name="title" maxlength="50" required pattern=".{1,50}"
                 value="<?php echo check_request_param('title'); ?>">
               <span id="span-title"><?php echo error_message('title', $errors); ?></span>
             </div>
@@ -59,7 +59,7 @@
             <div class="w3-section">
               <label for="entry">Text příspěvku</label>
               <textarea id="entry" class="w3-input w3-border<?php echo add_err_class('body', $errors); ?>"
-                name="entry" rows="9" maxlength="65000" required><?php echo check_request_param('entry'); ?></textarea>
+                name="entry" rows="9" maxlength="65000" required pattern=".{1,65000}"><?php echo check_request_param('entry'); ?></textarea>
               <span id="span-body"><?php echo error_message('body', $errors); ?></span>
             </div>
 

@@ -39,7 +39,7 @@
             <div class="w3-section">
               <label for="topic-name">Název</label>
               <input id="topic-name" class="w3-input w3-border short w3-animate-input<?php echo add_err_class('new-topic', $errors); ?>"
-                type="text" name="new-topic" required
+                type="text" name="new-topic" maxlength="20" required pattern=".{1,20}"
                 value="<?php echo check_request_param('new-topic'); ?>">
               <span id="span-new-topic"><?php echo error_message('new-topic', $errors); ?></span>
             </div>
